@@ -8,7 +8,7 @@ public class Package {
     private Project project;
 
     public Package(String path) {
-        this.project = new Project(path);
+        this.project = new Project(path + "\\newpackage");
     }
 
     public Package formNewPackage() {
@@ -16,6 +16,5 @@ public class Package {
     }
 
     public static void main(String[] args) {
-
     }
 }

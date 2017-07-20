@@ -9,18 +9,17 @@ import java.util.LinkedList;
  */
 public class Project {
 
-    private Folder mainProjectPath;
-    private FilesStructure projectStructure;
+    private Folder projectFolder;
 
     public Project(String path) {
-        this.mainProjectPath = new Folder(path);
-        this.projectStructure = new FilesStructure();
+        this.projectFolder = new Folder(path);
+    }
 
-        for (File file : this.mainProjectPath.listFiles()) {
-            this.projectStructure.add(file);
-        }
-
-        System.out.println(this.projectStructure);
+    @Override
+    public String toString() {
+        return "Project{\n" +
+                projectFolder +
+                '}';
     }
 
     public static class WindowsObject extends File{
@@ -125,5 +124,6 @@ public class Project {
 
     public static void main(String[] args) {
         Project proj = new Project("C:\\Users\\User\\Documents\\4an70m\\src");
+        System.out.println(proj);
     }
 }
