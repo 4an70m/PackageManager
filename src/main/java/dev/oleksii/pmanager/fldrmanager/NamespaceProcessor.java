@@ -2,9 +2,6 @@ package dev.oleksii.pmanager.fldrmanager;
 
 import java.util.LinkedList;
 
-/**
- * Created by User on 18.07.2017.
- */
 public class NamespaceProcessor {
 
     public Filters filters;
