@@ -119,19 +119,19 @@ public class Project {
         }
     }
 
-    public static class MetaMetadaraField extends MetadataFile {
-        public MetaMetadaraField(String pathname) {
+    public static class MetaMetadataField extends MetadataFile {
+        public MetaMetadataField(String pathname) {
             super(pathname);
         }
 
-        public MetaMetadaraField(File file) {
+        public MetaMetadataField(File file) {
             super(file);
         }
     }
 
     public static abstract class MetaPairedMetadataFile extends MetadataFile {
 
-        protected MetaMetadaraField metaFile;
+        protected MetaMetadataField metaFile;
 
         public MetaPairedMetadataFile(String pathname) {
             super(pathname);
