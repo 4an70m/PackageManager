@@ -1,11 +1,15 @@
 package dev.oleksii.pmanager.fldrmanager.project.structure;
 
 import dev.oleksii.pmanager.fldrmanager.project.structure.meta.WindowsObject;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public final class Folder extends WindowsObject {
 
@@ -58,6 +62,17 @@ public final class Folder extends WindowsObject {
         return null;
     }
 
+    @Override
+    public Element getPackageXml(Document document) {
+        Element folderElement = document.createElement("folder");
+        List<Element> childElements = this.structure.values()
+                                                    .stream()
+                                                    .map(childElement -> childElement.getPackageXml(document))
+                                                    .collect(Collectors.toList());
+
+        childElements.stream().forEach(folderElement::appendChild);
+        return folderElement;
+    }
 
     @Override
     public String toString() {
