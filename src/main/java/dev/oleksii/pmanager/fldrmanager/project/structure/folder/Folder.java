@@ -70,7 +70,15 @@ public final class Folder extends WindowsObject {
                                                     .map(childElement -> childElement.getPackageXml(document))
                                                     .collect(Collectors.toList());
 
+//        List<Element> childElements = new ArrayList<>();
+//        for (WindowsObject windowsObject : this.structure.values()) {
+//            childElements.add(windowsObject.getPackageXml(document));
+//        }
+
         childElements.stream().forEach(folderElement::appendChild);
+//        for (Element childElement : childElements) {
+//            folderElement.appendChild(childElement);
+//        }
         return folderElement;
     }
 
