@@ -10,21 +10,30 @@ import java.io.IOException;
 /**
  * Created by new on 17.08.2017.
  */
-public class Package extends Folder{
+public class PackageFolder extends Folder{
 
-    public Package(String pathname) throws IOException {
+    public PackageFolder(String pathname) throws IOException {
         super(pathname);
     }
 
-    public Package(File file) throws IOException {
+    public PackageFolder(File file) throws IOException {
         super(file);
     }
 
     @Override
     public Element getPackageXml(Document document) {
         Element packageElement = document.createElement("Package");
-        packageElement.setAttribute("xmlns", "");
-        Node attribute = document.createAttribute();
+        packageElement.setAttribute("xmlns", "http://soap.sforce.com/2006/04/metadata");
 
+        return super.createChildElements(document, packageElement);
+    }
+
+    @Override
+    public void appendChild(Element folder, Document document) {
+        Element versionElement = document.createElement("version");
+        Node versionElementValue = document.createTextNode("40");
+        versionElement.appendChild(versionElementValue);
+
+        folder.appendChild(versionElement);
     }
 }
