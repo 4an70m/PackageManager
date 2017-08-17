@@ -1,5 +1,8 @@
 package dev.oleksii.pmanager.fldrmanager.project.structure.meta;
 
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+
 import java.io.File;
 
 public final class PairedMetadata extends Metadata {
