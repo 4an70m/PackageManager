@@ -1,5 +1,6 @@
 package dev.oleksii.pmanager.fldrmanager.project.structure;
 
+import dev.oleksii.pmanager.fldrmanager.project.structure.folder.Folder;
 import dev.oleksii.pmanager.fldrmanager.project.structure.meta.*;
 
 import java.io.File;
