@@ -1,8 +1,10 @@
 package dev.oleksii.pmanager.fldrmanager.project.structure.meta;
 
+import dev.oleksii.pmanager.fldrmanager.project.structure.XmlPackageable;
+
 import java.io.File;
 
-public abstract class WindowsObject extends File {
+public abstract class WindowsObject extends File implements XmlPackageable {
 
     private boolean isSelected;
 

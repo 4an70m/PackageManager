@@ -1,6 +1,8 @@
 package dev.oleksii.pmanager.fldrmanager.project;
 
-import dev.oleksii.pmanager.fldrmanager.project.structure.Folder;
+import dev.oleksii.pmanager.fldrmanager.project.packagexmlgenerator.generator.PackageXmlGenerator;
+import dev.oleksii.pmanager.fldrmanager.project.structure.folder.Folder;
+import dev.oleksii.pmanager.fldrmanager.project.structure.folder.PackageFolder;
 
 import java.io.IOException;
 
@@ -11,7 +13,7 @@ public class Project {
 
     public Project(String path) {
         try {
-            this.projectFolder = new Folder(path);
+            this.projectFolder = new PackageFolder(path);
             this.projectFolder.restructureFolder();
         } catch (IOException e) {
             e.printStackTrace();
@@ -27,7 +29,9 @@ public class Project {
 
 
     public static void main(String[] args) {
-        Project proj = new Project("C:\\Users\\4an70m\\Documents\\Salesforce\\sfdc-dev-oleksii\\src");
+        Project proj = new Project("C:\\Users\\new\\IdeaProjects\\abbottDev1Test\\src");
         System.out.println(proj);
+        PackageXmlGenerator xmlGenerator = new PackageXmlGenerator(proj.projectFolder);
+        xmlGenerator.getPackageXml();
     }
 }

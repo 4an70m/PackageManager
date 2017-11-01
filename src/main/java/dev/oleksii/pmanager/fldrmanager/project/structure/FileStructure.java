@@ -1,9 +1,7 @@
 package dev.oleksii.pmanager.fldrmanager.project.structure;
 
-import dev.oleksii.pmanager.fldrmanager.project.structure.meta.PackageXml;
-import dev.oleksii.pmanager.fldrmanager.project.structure.meta.PairedMetadata;
-import dev.oleksii.pmanager.fldrmanager.project.structure.meta.SingleMetadata;
-import dev.oleksii.pmanager.fldrmanager.project.structure.meta.WindowsObject;
+import dev.oleksii.pmanager.fldrmanager.project.structure.folder.Folder;
+import dev.oleksii.pmanager.fldrmanager.project.structure.meta.*;
 
 import java.io.File;
 import java.io.IOException;
