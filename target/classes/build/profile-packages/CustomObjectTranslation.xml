@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><Package xmlns="http://soap.sforce.com/2006/04/metadata">
+  <types>
+    <members>Cource__c-en_US</members>
+    <members>Group__c-en_US</members>
+    <members>Payment__c-ru</members>
+    <members>Price__c-ru</members>
+    <members>Pricing__mdt-ru</members>
+    <members>Student_Group__c-en_US</members>
+    <members>Student__c-en_US</members>
+    <members>Teacher__c-en_US</members>
+    <name>CustomObjectTranslation</name>
+  </types>
+  <types>
+    <members>*</members>
+    <name>Profile</name>
+  </types>
+  <version>40.0</version>
+</Package>
